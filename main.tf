@@ -64,7 +64,7 @@ resource "aws_security_group" "SG-JS-Linux" {
 
     #==========REGLAS DE ENTRADA==========
 
-    #RDP
+    #SSH
     ingress {
         from_port = 22
         to_port = 22
