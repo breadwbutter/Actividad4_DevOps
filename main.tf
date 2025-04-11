@@ -84,10 +84,10 @@ resource "aws_security_group" "SG-JS-Linux" {
 
     #TODO EL TRAFICO
     egress{
-    from_port = 0
-    to_port = 0
-    protocol = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
+        from_port = 0
+        to_port = 0
+        protocol = "-1"
+        cidr_blocks = ["0.0.0.0/0"]
     }    
 
 }
@@ -107,11 +107,11 @@ resource "aws_security_group" "SG-LinWeb" {
         cidr_blocks = ["0.0.0.0/0"]
     }
 
-    #HTTP
+    #ALL TRAFFIC
     ingress {
-        from_port = 80
-        to_port = 80
-        protocol = "tcp"
+        from_port = 0
+        to_port = 0
+        protocol = "-1"
         cidr_blocks = ["0.0.0.0/0"]
     }
 
@@ -119,10 +119,10 @@ resource "aws_security_group" "SG-LinWeb" {
 
     #TODO EL TRAFICO
     egress{
-    from_port = 0
-    to_port = 0
-    protocol = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
+        from_port = 0
+        to_port = 0
+        protocol = "-1"
+        cidr_blocks = ["0.0.0.0/0"]
     }
 
     #HTTP
