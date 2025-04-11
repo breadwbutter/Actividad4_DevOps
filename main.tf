@@ -72,6 +72,14 @@ resource "aws_security_group" "SG-JS-Linux" {
         cidr_blocks = ["0.0.0.0/0"]
     }
 
+    #HTTP
+    ingress {
+        from_port = 80
+        to_port = 80
+        protocol = "tcp"
+        cidr_blocks = ["0.0.0.0/0"]
+    }
+
     #==========REGLAS DE SALDIA==========
 
     #SSH
@@ -81,6 +89,14 @@ resource "aws_security_group" "SG-JS-Linux" {
         protocol = "tcp"
         cidr_blocks = ["0.0.0.0/0"]
     }
+
+    #TODO EL TRAFICO
+    egress{
+    from_port = 0
+    to_port = 0
+    protocol = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+    }    
 
 }
 
