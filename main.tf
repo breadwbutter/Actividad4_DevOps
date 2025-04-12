@@ -104,15 +104,7 @@ resource "aws_security_group" "SG-LinWeb" {
         from_port = 22
         to_port = 22
         protocol = "tcp"
-        cidr_blocks = ["0.0.0.0/0"]
-    }
-
-    #ALL TRAFFIC
-    ingress {
-        from_port = 0
-        to_port = 0
-        protocol = "-1"
-        cidr_blocks = ["0.0.0.0/0"]
+        cidr_blocks = ["10.10.0.248/24"]
     }
 
     #==========REGLAS DE SALDIA==========
